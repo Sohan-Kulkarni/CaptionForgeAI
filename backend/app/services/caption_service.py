@@ -107,6 +107,7 @@ def load_model() -> None:
 
             loaded_model = BlipForConditionalGeneration.from_pretrained(
                 model_name,
+                low_cpu_mem_usage=True,
                 **model_kwargs,
             )
             loaded_model.to(device)
